@@ -5,6 +5,10 @@ const app = express();
 // Use body-parser middleware to parse JSON request bodies
 app.use(bodyParser.json());
 
+app.get('/', (req,res)=>{
+    res.json({ "hello": "world" });
+})
+
 // POST endpoint '/add' to handle the incoming POST request
 app.post('/add', (req, res) => {
     console.log('Request received:', req.body);  // Log the incoming request body for debugging
